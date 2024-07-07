@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>View Post</h1>
+
+  <a routerLink="/post/index" class="btn btn-primary mb-3">Back</a>
+
+  <div *ngIf="post">
+    <div class="card">
+      <div class="card-header">
+        Post Details
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <strong>ID:</strong>
+          <p>{{ post.id }}</p>
+        </div>
+        <div class="mb-3">
+          <strong>Title:</strong>
+          <p>{{ post.title }}</p>
+        </div>
+        <div class="mb-3">
+          <strong>Body:</strong>
+          <p>{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!post" class="alert alert-info mt-3">
+    Loading post data...
+  </div>
+</div>
